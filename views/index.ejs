@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style.css">
+    <title>All posts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <h1 id="title">POSTS</h1>
+</header>
+<article>
+    <% for(post of posts){ %>
+        <div class="post">
+            <h3 class="username">@ <%=post.username%></h3>
+            <p class="content"> <%=post.content%></p>
+            <div class="buttons">
+                <div class="detail_container">
+                    <a href="/posts/<%=post.id%>" class="detail_button">
+                        <button class="detail">Detail</button>
+                    </a>
+                </div>
+                <div class="edit_container">
+            <a href="/posts/<%=post.id%>/edit" class="edit_button">
+                <button class="edit">Edit</button>
+            </a>
+            </div>
+            <div class="delete_container">
+            <form action="/posts/<%=post.id%>?_method=DELETE" method="post"  class="delete_button">
+                <button class="delete">DELETE</button>
+            </form>
+            </div>
+            </div>
+        </div>
+    <%}%>
+</article>
+    <div class="postnew">
+    <a href="/posts/new" class="newpost_button">
+        <button class="newPost">New Post</button>
+    </a>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    // Function to get query parameters
+    function getQueryParams() {
+        let params = {};
+        window.location.search.substring(1).split("&").forEach(function(param) {
+            let parts = param.split("=");
+            params[parts[0]] = decodeURIComponent(parts[1]);
+        });
+        return params;
+    }
+
+    // Check for the error parameter
+    let queryParams = getQueryParams();
+    if (queryParams.error === "missingUsername") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'You have to enter a username at least.'
+        }).then((result) => {
+            // Redirect to the same page without query parameters
+            window.location.href = window.location.pathname;
+        });
+    }
+</script>
+</script>
+</body>
+</html>
+
+
+

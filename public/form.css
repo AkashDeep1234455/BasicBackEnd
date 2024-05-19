@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lora", serif;
+}
+
+body{
+    background-color: #EDE8F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+form{
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 20px rgb(215, 178, 178);
+    width: 25%;
+    height: 80%;
+    align-items: center;
+    background-color: #ADBBDA;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+h2{
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: maroon;
+}
+span{
+    text-decoration: line-through;
+}
+#username{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    width: 70%;
+    height: 7%;
+    border-radius: 0.5rem;
+    border: none;
+    padding-left: 1rem;
+    outline: none;
+}
+#usernameText{
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: x-large;
+}
+.user{
+    font-size: xx-large;
+    text-decoration: none;
+}
+#content{
+    width: 70%;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    height: 35%;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+button{
+    width: 7rem;
+    height: 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    transition: all linear 0.24s;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+}
+button:hover{
+    background-color: red;
+    cursor: pointer;
+    color: #EDE8F5;
+
+}
+.back{
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    border: 2px solid black;
+    box-shadow: 4px 4px 0px black;
+}
+

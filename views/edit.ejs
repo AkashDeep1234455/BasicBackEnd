@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/form.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/form.css">
+    <title>Edit Post</title>
+</head>
+<body>
+    
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <h2>Edit <span>POST</span></h2>
+        <p id="usernameText"><span class="user">Username:</span> @<%=post.username%></p>
+        <textarea name="content" id="content" placeholder="write your new post"></textarea>
+        <button>Submit Post</button>
+    </form>
+    <a href="/posts">
+        <button class="back">Back</button>
+    </a>
+</body>
+</html>

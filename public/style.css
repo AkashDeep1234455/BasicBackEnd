@@ -1,0 +1,196 @@
+/*general styling*/
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #EDE8F5;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: "Lora", serif;
+
+}
+header{
+    width: 100vw;
+    height: 10vh;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: line-through maroon;
+}
+.username{
+ display: inline;
+ background-color: inherit;
+ margin-top: 2rem;
+ margin-bottom: 1.5rem;
+ font-size: 1.6rem;
+}
+.content{
+    display: inline;
+    background-color: inherit;
+    height: auto;
+    max-height: 10rem;
+    width: 80%;
+    overflow: hidden;
+}
+.buttons{
+    display: flex;
+    background-color: inherit;
+    margin-bottom: 1rem;
+    width: 25%;
+    height: 4rem;
+    margin-top: 4rem;
+    justify-content: space-around;
+}
+h1{
+    color: maroon;
+    font-size: 3rem;
+}
+form{
+    width: 5rem;
+}
+article{
+    flex-wrap: wrap;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.post{
+    background-color: #ADBBDA;
+    min-height: 15rem;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    width: 90vw;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    transition: all  linear 0.2s ;
+    overflow: hidden;
+    cursor: pointer;
+}
+.post:hover{
+    box-shadow: 4px 4px 20px #ADBBDA;
+    transform: scale(1.01);
+    border-radius: 1rem;
+} 
+
+
+
+.detail_container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+.detail_button .detail{
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.detail:hover{
+    border:3px solid green;
+}
+.detail_container:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 0px green;
+}
+
+
+.edit_button .edit{
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    font-weight: bolder;
+}
+.edit_container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+
+.edit:hover{
+    border:3px solid #3d52a0;
+}
+.edit_container:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 0px #3d52a0;
+}
+
+
+.delete_button .delete{
+    width: 5rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all linear 0.2s;
+    font-weight: bolder;
+}
+
+.delete:hover{
+    border: 3px solid black;
+}
+.delete_container{
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    text-decoration: none;
+    transition: all linear 0.2s;
+}
+.delete_container:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 0px red;
+}
+
+
+.newpost_button{
+   transition: all linear 0.2s;
+}
+.newpost_button:hover{
+    transform: scale(1.2);
+}
+
+.newPost{
+    width: 6rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: all linear 0.2s;
+    background-color: #EDE8F5;
+    font-weight: bolder;
+}
+.newPost:hover{
+    border:5px solid #3d52a0;
+    background-color: white;
+    font-size: 1rem;
+}
+.postnew{
+    display: inline-block;
+    text-decoration: none;
+    position: fixed;
+    left: 92%;
+    bottom: 3%;
+    transition: all linear 0.2s;
+}
+.postnew:hover{
+    transform: scale(1.11);
+    box-shadow: 5px 5px 0px #3d52a0; 
+}
+
+#back{
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+}
+#full_content{
+    display: inline;
+    background-color: inherit;
+    height: auto;
+   
+    width: 80%;
+    overflow: hidden;
+}
