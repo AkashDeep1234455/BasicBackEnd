@@ -3,7 +3,7 @@ const express = require("express");
 const { v4: uuidv4} = require('uuid');
 const app = express();
 const Swal = require('sweetalert2')
-const port = 8080;
+const port = process.env.PORT || 8080;
 const methodOverride = require('method-override');
 ///acquiring path of our view and public so that we can use them
 const path = require("path");
