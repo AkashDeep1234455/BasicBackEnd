@@ -45,6 +45,11 @@ let posts = [
     },
 ];  
 
+///root route
+app.get("/", (req, res) => {
+    res.redirect("/posts");
+});
+
 
 ///our first Api to post all data to our main page
 app.get("/posts",(req,res)=>{
