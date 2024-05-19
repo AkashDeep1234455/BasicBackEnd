@@ -7,7 +7,6 @@ const port = process.env.PORT || 8080;
 const methodOverride = require('method-override');
 ///acquiring path of our view and public so that we can use them
 const path = require("path");
-
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
@@ -17,8 +16,6 @@ app.use(methodOverride('_method'));
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname,"public")));  //middleware to serve static files like css used to configure files for serving static files
-
-
 
 
 ///it will store all post data and i is variable type as if it was const type deleting data will be not allowed..
@@ -69,9 +66,8 @@ app.post("/posts",(req,res)=>{
     let id = uuidv4();
     posts.push({id,username,content});
     res.redirect("/posts");
-    }else{
-        res.redirect("/posts?error=missingUsername");
-    }
+    }else res.redirect("/posts?error=missingUsername");
+    
     
 });
 
@@ -80,11 +76,8 @@ app.get("/posts/:id",(req,res)=>{
     let {id} = req.params;
     console.log(id);
     let post = posts.find((p)=> p.id === id);
-    if(post){
-        res.render("newIndex",{post:post});
-    } else {
-        res.status(404).send("Post not found");
-    }
+    if(post) res.render("newIndex",{post:post});
+    else res.status(404).send("Post not found");
 });
 
 
@@ -95,9 +88,7 @@ app.patch("/posts/:id",(req,res)=>{
     let newContent= req.body.content.trim();
     if (newContent !== "") {
         let post = posts.find((p) => id === p.id);
-        if (post) {
-            post.content = newContent;
-        }
+        if (post) post.content = newContent;
     }
     res.redirect("/posts");
 });
@@ -122,21 +113,6 @@ app.delete("/posts/:id",(req,res)=>{
     posts = posts.filter((p)=>id!==p.id);
     res.redirect("/posts");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
