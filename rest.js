@@ -25,19 +25,24 @@ app.use(express.static(path.join(__dirname,"public")));  //middleware to serve s
 let posts = [
     {
         id:uuidv4(),
-        username:"Akash",
-        content: "I love coding",
+        username:"Aditya",
+        content: "Meri CG sbse jyada",
     },
     {
         id:uuidv4(),
-        username:"Khushi",
-        content: "I steall My brother Money",
+        username:"Himanshu",
+        content: "Mera maggie best hai",
     },
     {
         id:uuidv4(),
         username:"Ankit",
         content: "Mai hu Kaala",
-    }
+    },
+    {
+        id:uuidv4(),
+        username:"Gaurav",
+        content: "HEHEHEHEHEHEHEHEHE",
+    },
 ];  
 
 
